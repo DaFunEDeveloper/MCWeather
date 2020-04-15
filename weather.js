@@ -44,12 +44,12 @@ $.ajax ({
 				$("#biome").text("Mountains");
 			}
 			if(hum > 89) {
-				$("#biome").text("Taiga");
+				$("#biome").text("Tundra");
 			}
 
 			if(hum <= 89) {
 				if(hum >= 65) {
-				$("#biome").text("Tundra");
+				$("#biome").text("Taiga");
 			}
 
 			}
