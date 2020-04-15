@@ -16,8 +16,53 @@ $.ajax ({
 		var Farenheit = F.toString();
 		$("#temperature").text(Farenheit);
 
-		
+		var temp = Farenheit;
+
 
 		$("#humidity").text(result.main.humidity);
+
+		var hum = result.main.humidity;
+
+		if(temp > 69) {
+			if(hum < 65) {
+				$("#biome").text("Desert");
+			}
+			if(hum > 89) {
+				$("#biome").text("Jungle");
+			}
+
+			if(hum <= 89) {
+				if(hum >= 65) {
+				$("#biome").text("Plains");
+			}
+
+			}
+		}
+
+		if(temp < 50) {
+			if(hum < 65) {
+				$("#biome").text("Mountains");
+			}
+			if(hum > 89) {
+				$("#biome").text("Taiga");
+			}
+
+			if(hum <= 89) {
+				if(hum >= 65) {
+				$("#biome").text("Tundra");
+			}
+
+			}
+		}
+		if(temp <= 89) {
+				if(temp >= 65) {
+			if(hum < 85) {
+				$("#biome").text("Plains");
+			}
+			if(hum >= 85) {
+				$("#biome").text("Swamp");
+			}
+		}
 	}
+}
 })
