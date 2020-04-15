@@ -1,5 +1,9 @@
 body {
-	background-color: skyblue;
+	background-image: url("mcm.png") no-repeat;
+	background-size: 100%;
+	min-height: 100%;
+	width: 100%;
+	font-family: 'aleo', sarif;
 }
 
 .header {
@@ -17,9 +21,3 @@ body {
 	padding: 10px;
 	background-color: white;
 }
-
-/*background-image: url("RochesterHills.jpg");
-	background-size: 100%;
-	min-height: 100%;
-	width: 100%;
-	font-family: 'aleo', sarif;*/
