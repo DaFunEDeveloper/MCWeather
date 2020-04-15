@@ -69,8 +69,8 @@ $.ajax ({
 
 			}
 		}
-		if(temp <= 89) {
-				if(temp >= 65) {
+		if(temp <= 69) {
+				if(temp >= 50) {
 			$("#trate").text("mild");
 			if(hum < 85) {
 				$("#biome").text("Plains");
