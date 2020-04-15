@@ -24,43 +24,54 @@ $.ajax ({
 		var hum = result.main.humidity;
 
 		if(temp > 69) {
+			$("#trate").text("warm");
 			if(hum < 65) {
 				$("#biome").text("Desert");
+				$("#hrate").text("low");
 			}
 			if(hum > 89) {
 				$("#biome").text("Jungle");
+				$("#hrate").text("high");
 			}
 
 			if(hum <= 89) {
 				if(hum >= 65) {
 				$("#biome").text("Plains");
+				$("#hrate").text("mild");
 			}
 
 			}
 		}
 
 		if(temp < 50) {
+			$("#trate").text("cool");
 			if(hum < 65) {
 				$("#biome").text("Mountains");
+				$("#hrate").text("low");
 			}
 			if(hum > 89) {
 				$("#biome").text("Tundra");
+				$("#hrate").text("high");
 			}
 
 			if(hum <= 89) {
 				if(hum >= 65) {
 				$("#biome").text("Taiga");
+				$("#hrate").text("mild");
 			}
 
 			}
 		}
 		if(temp <= 89) {
 				if(temp >= 65) {
+			$("#trate").text("mild");
 			if(hum < 85) {
 				$("#biome").text("Plains");
+				$("#hrate").text("low");
 			}
 			if(hum >= 85) {
 				$("#biome").text("Swamp");
+				$("#hrate").text("high");
 			}
 		}
 	}
