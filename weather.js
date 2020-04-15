@@ -11,6 +11,7 @@ $.ajax ({
 		console.log(result.name)
 
 		$("#location").text(result.name);
+		$("#location1").text(result.name);
 
 		var F = Math.round(result.main.temp * (9/5) -459.67);
 		var Farenheit = F.toString();
@@ -27,16 +28,19 @@ $.ajax ({
 			$("#trate").text("warm");
 			if(hum < 65) {
 				$("#biome").text("Desert");
+				$("#biome1").text("desert");
 				$("#hrate").text("low");
 			}
 			if(hum > 89) {
 				$("#biome").text("Jungle");
+				$("#biome1").text("jungle");
 				$("#hrate").text("high");
 			}
 
 			if(hum <= 89) {
 				if(hum >= 65) {
 				$("#biome").text("Plains");
+				$("#biome1").text("plains");
 				$("#hrate").text("mild");
 			}
 
@@ -47,16 +51,19 @@ $.ajax ({
 			$("#trate").text("cool");
 			if(hum < 65) {
 				$("#biome").text("Mountains");
+				$("#biome1").text("mountains");
 				$("#hrate").text("low");
 			}
 			if(hum > 89) {
 				$("#biome").text("Tundra");
+				$("#biome1").text("tundra");
 				$("#hrate").text("high");
 			}
 
 			if(hum <= 89) {
 				if(hum >= 65) {
 				$("#biome").text("Taiga");
+				$("#biome1").text("taiga");
 				$("#hrate").text("mild");
 			}
 
@@ -67,10 +74,12 @@ $.ajax ({
 			$("#trate").text("mild");
 			if(hum < 85) {
 				$("#biome").text("Plains");
+				$("#biome1").text("plains");
 				$("#hrate").text("low");
 			}
 			if(hum >= 85) {
 				$("#biome").text("Swamp");
+				$("#biome1").text("swamp");
 				$("#hrate").text("high");
 			}
 		}
